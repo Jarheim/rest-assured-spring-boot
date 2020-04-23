@@ -1,0 +1,1445 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "cart": {
+      "type": "object",
+      "properties": {
+        "cartOwner": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "productName": {
+                  "type": "string"
+                },
+                "productCode": {
+                  "type": "string"
+                },
+                "variantCode": {
+                  "type": "string"
+                },
+                "whitePrice": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "basePrice": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "productPrice": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "sellingAttribute": {
+                  "type": "string"
+                },
+                "color": {
+                  "type": "string"
+                },
+                "colorCode": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "string"
+                },
+                "sizeCode": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer"
+                },
+                "totalPrice": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "strikedPrice": {
+                  "type": "boolean"
+                },
+                "productImage": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "imageUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "imageUrl"
+                  ]
+                },
+                "maxQuantity": {
+                  "type": "integer"
+                },
+                "inStock": {
+                  "type": "boolean"
+                },
+                "productUrl": {
+                  "type": "string"
+                },
+                "categoryCode": {
+                  "type": "string"
+                },
+                "internalName": {
+                  "type": "string"
+                },
+                "hazmat": {
+                  "type": "boolean"
+                },
+                "isFavourite": {
+                  "type": "boolean"
+                },
+                "isYellowPriceAvailable": {
+                  "type": "boolean"
+                },
+                "priceType": {
+                  "type": "string"
+                },
+                "baseProductCode": {
+                  "type": "string"
+                },
+                "fewPieceLeft": {
+                  "type": "boolean"
+                },
+                "isCartStarter": {
+                  "type": "boolean"
+                },
+                "showClubMarker": {
+                  "type": "boolean"
+                },
+                "giveAway": {
+                  "type": "boolean"
+                },
+                "onSiteAttributeMap": {
+                  "type": "object"
+                },
+                "cartProductMarker": {
+                  "type": "object",
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "text",
+                    "type"
+                  ]
+                },
+                "cartNonProductMarker": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "productName",
+                "productCode",
+                "variantCode",
+                "whitePrice",
+                "basePrice",
+                "productPrice",
+                "sellingAttribute",
+                "color",
+                "colorCode",
+                "size",
+                "sizeCode",
+                "quantity",
+                "totalPrice",
+                "strikedPrice",
+                "productImage",
+                "maxQuantity",
+                "inStock",
+                "productUrl",
+                "categoryCode",
+                "internalName",
+                "hazmat",
+                "isFavourite",
+                "isYellowPriceAvailable",
+                "priceType",
+                "baseProductCode",
+                "fewPieceLeft",
+                "isCartStarter",
+                "showClubMarker",
+                "giveAway",
+                "onSiteAttributeMap",
+                "cartProductMarker",
+                "cartNonProductMarker"
+              ]
+            }
+          ]
+        },
+        "hazmatItems": {
+          "type": "array",
+          "items": {}
+        },
+        "codLimitReached": {
+          "type": "boolean"
+        },
+        "praFilterCategories": {
+          "type": "string"
+        },
+        "maxVouchers": {
+          "type": "integer"
+        },
+        "taxesApplied": {
+          "type": "boolean"
+        },
+        "dobRequired": {
+          "type": "boolean"
+        },
+        "placeOrderDisabled": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cartOwner",
+        "items",
+        "hazmatItems",
+        "codLimitReached",
+        "praFilterCategories",
+        "maxVouchers",
+        "taxesApplied",
+        "dobRequired",
+        "placeOrderDisabled"
+      ]
+    },
+    "orderTotals": {
+      "type": "object",
+      "properties": {
+        "totalPrice": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "formattedValue": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "formattedValue"
+          ]
+        },
+        "totalYellowPrice": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "formattedValue": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "formattedValue"
+          ]
+        },
+        "totalDiscount": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "formattedValue": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "formattedValue"
+          ]
+        },
+        "subTotal": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "formattedValue": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "formattedValue"
+          ]
+        },
+        "deliveryCost": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "formattedValue": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "formattedValue"
+          ]
+        },
+        "installment": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "formattedValue": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "formattedValue"
+          ]
+        },
+        "paymentCost": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "type": "number"
+            },
+            "formattedValue": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "value",
+            "formattedValue"
+          ]
+        },
+        "externalTaxApplied": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "totalPrice",
+        "totalYellowPrice",
+        "totalDiscount",
+        "subTotal",
+        "deliveryCost",
+        "installment",
+        "paymentCost",
+        "externalTaxApplied"
+      ]
+    },
+    "customer": {
+      "type": "object",
+      "properties": {
+        "validated": {
+          "type": "boolean"
+        },
+        "displayUid": {
+          "type": "string"
+        },
+        "customerId": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "salutationName": {
+          "type": "string"
+        },
+        "omnicredit": {
+          "type": "boolean"
+        },
+        "cbp": {
+          "type": "boolean"
+        },
+        "customerAddresses": {
+          "type": "array",
+          "items": {}
+        }
+      },
+      "required": [
+        "validated",
+        "displayUid",
+        "customerId",
+        "displayName",
+        "salutationName",
+        "omnicredit",
+        "cbp",
+        "customerAddresses"
+      ]
+    },
+    "delivery": {
+      "type": "object",
+      "properties": {
+        "validated": {
+          "type": "boolean"
+        },
+        "selectedDeliveryMode": {
+          "type": "string"
+        },
+        "deliveryModeList": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "nickName": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "longDescription": {
+                  "type": "string"
+                },
+                "deliveryCost": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "type": {
+                  "type": "string"
+                },
+                "warehouseLimitReached": {
+                  "type": "boolean"
+                },
+                "tommorrowHoliday": {
+                  "type": "boolean"
+                },
+                "supportHazmat": {
+                  "type": "boolean"
+                },
+                "timeSlotInterval": {
+                  "type": "array",
+                  "items": {}
+                },
+                "warehouseCutoffTimePassed": {
+                  "type": "boolean"
+                },
+                "pseudoCode": {
+                  "type": "string"
+                },
+                "template": {
+                  "type": "string"
+                },
+                "freeShipping": {
+                  "type": "boolean"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "fast": {
+                  "type": "boolean"
+                },
+                "phoneNumberMandatory": {
+                  "type": "boolean"
+                },
+                "addressBlackListed": {
+                  "type": "boolean"
+                },
+                "disableGrayOutLogic": {
+                  "type": "boolean"
+                },
+                "blacklistMessage": {
+                  "type": "string"
+                },
+                "pssEnable": {
+                  "type": "boolean"
+                },
+                "supportCOD": {
+                  "type": "boolean"
+                },
+                "paymentNotAvailable": {
+                  "type": "boolean"
+                },
+                "pssNoResponse": {
+                  "type": "boolean"
+                },
+                "pssCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "name",
+                "nickName",
+                "description",
+                "longDescription",
+                "deliveryCost",
+                "type",
+                "warehouseLimitReached",
+                "tommorrowHoliday",
+                "supportHazmat",
+                "timeSlotInterval",
+                "warehouseCutoffTimePassed",
+                "pseudoCode",
+                "template",
+                "freeShipping",
+                "active",
+                "fast",
+                "phoneNumberMandatory",
+                "addressBlackListed",
+                "disableGrayOutLogic",
+                "blacklistMessage",
+                "pssEnable",
+                "supportCOD",
+                "paymentNotAvailable",
+                "pssNoResponse",
+                "pssCode"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "nickName": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "longDescription": {
+                  "type": "string"
+                },
+                "deliveryCost": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "type": {
+                  "type": "string"
+                },
+                "warehouseLimitReached": {
+                  "type": "boolean"
+                },
+                "tommorrowHoliday": {
+                  "type": "boolean"
+                },
+                "supportHazmat": {
+                  "type": "boolean"
+                },
+                "timeSlotInterval": {
+                  "type": "array",
+                  "items": {}
+                },
+                "warehouseCutoffTimePassed": {
+                  "type": "boolean"
+                },
+                "pseudoCode": {
+                  "type": "string"
+                },
+                "template": {
+                  "type": "string"
+                },
+                "freeShipping": {
+                  "type": "boolean"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "fast": {
+                  "type": "boolean"
+                },
+                "phoneNumberMandatory": {
+                  "type": "boolean"
+                },
+                "addressBlackListed": {
+                  "type": "boolean"
+                },
+                "disableGrayOutLogic": {
+                  "type": "boolean"
+                },
+                "blacklistMessage": {
+                  "type": "string"
+                },
+                "pssEnable": {
+                  "type": "boolean"
+                },
+                "supportCOD": {
+                  "type": "boolean"
+                },
+                "paymentNotAvailable": {
+                  "type": "boolean"
+                },
+                "pssNoResponse": {
+                  "type": "boolean"
+                },
+                "pssCode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "name",
+                "nickName",
+                "description",
+                "longDescription",
+                "deliveryCost",
+                "type",
+                "warehouseLimitReached",
+                "tommorrowHoliday",
+                "supportHazmat",
+                "timeSlotInterval",
+                "warehouseCutoffTimePassed",
+                "pseudoCode",
+                "template",
+                "freeShipping",
+                "active",
+                "fast",
+                "phoneNumberMandatory",
+                "addressBlackListed",
+                "disableGrayOutLogic",
+                "blacklistMessage",
+                "pssEnable",
+                "supportCOD",
+                "paymentNotAvailable",
+                "pssNoResponse",
+                "pssCode"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "nickName": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "longDescription": {
+                  "type": "string"
+                },
+                "deliveryCost": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "type": {
+                  "type": "string"
+                },
+                "warehouseLimitReached": {
+                  "type": "boolean"
+                },
+                "tommorrowHoliday": {
+                  "type": "boolean"
+                },
+                "supportHazmat": {
+                  "type": "boolean"
+                },
+                "timeSlotInterval": {
+                  "type": "array",
+                  "items": {}
+                },
+                "warehouseCutoffTimePassed": {
+                  "type": "boolean"
+                },
+                "pseudoCode": {
+                  "type": "string"
+                },
+                "template": {
+                  "type": "string"
+                },
+                "freeShipping": {
+                  "type": "boolean"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "fast": {
+                  "type": "boolean"
+                },
+                "additionalInfo": {
+                  "type": "string"
+                },
+                "openingHoursDesc": {
+                  "type": "string"
+                },
+                "searchField": {
+                  "type": "string"
+                },
+                "selectPlace": {
+                  "type": "string"
+                },
+                "phoneNumberMandatory": {
+                  "type": "boolean"
+                },
+                "addressBlackListed": {
+                  "type": "boolean"
+                },
+                "disableGrayOutLogic": {
+                  "type": "boolean"
+                },
+                "blacklistMessage": {
+                  "type": "string"
+                },
+                "pssEnable": {
+                  "type": "boolean"
+                },
+                "supportCOD": {
+                  "type": "boolean"
+                },
+                "paymentNotAvailable": {
+                  "type": "boolean"
+                },
+                "pssNoResponse": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "code",
+                "name",
+                "nickName",
+                "description",
+                "longDescription",
+                "deliveryCost",
+                "type",
+                "warehouseLimitReached",
+                "tommorrowHoliday",
+                "supportHazmat",
+                "timeSlotInterval",
+                "warehouseCutoffTimePassed",
+                "pseudoCode",
+                "template",
+                "freeShipping",
+                "active",
+                "fast",
+                "additionalInfo",
+                "openingHoursDesc",
+                "searchField",
+                "selectPlace",
+                "phoneNumberMandatory",
+                "addressBlackListed",
+                "disableGrayOutLogic",
+                "blacklistMessage",
+                "pssEnable",
+                "supportCOD",
+                "paymentNotAvailable",
+                "pssNoResponse"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "nickName": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "longDescription": {
+                  "type": "string"
+                },
+                "deliveryCost": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "type": {
+                  "type": "string"
+                },
+                "warehouseLimitReached": {
+                  "type": "boolean"
+                },
+                "tommorrowHoliday": {
+                  "type": "boolean"
+                },
+                "supportHazmat": {
+                  "type": "boolean"
+                },
+                "timeSlotInterval": {
+                  "type": "array",
+                  "items": {}
+                },
+                "warehouseCutoffTimePassed": {
+                  "type": "boolean"
+                },
+                "nddCutoffTime": {
+                  "type": "string"
+                },
+                "pseudoCode": {
+                  "type": "string"
+                },
+                "template": {
+                  "type": "string"
+                },
+                "freeShipping": {
+                  "type": "boolean"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "fast": {
+                  "type": "boolean"
+                },
+                "cutoffTimeDescription": {
+                  "type": "string"
+                },
+                "phoneNumberMandatory": {
+                  "type": "boolean"
+                },
+                "addressBlackListed": {
+                  "type": "boolean"
+                },
+                "disableGrayOutLogic": {
+                  "type": "boolean"
+                },
+                "blacklistMessage": {
+                  "type": "string"
+                },
+                "pssEnable": {
+                  "type": "boolean"
+                },
+                "supportCOD": {
+                  "type": "boolean"
+                },
+                "paymentNotAvailable": {
+                  "type": "boolean"
+                },
+                "pssNoResponse": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "code",
+                "name",
+                "nickName",
+                "description",
+                "longDescription",
+                "deliveryCost",
+                "type",
+                "warehouseLimitReached",
+                "tommorrowHoliday",
+                "supportHazmat",
+                "timeSlotInterval",
+                "warehouseCutoffTimePassed",
+                "nddCutoffTime",
+                "pseudoCode",
+                "template",
+                "freeShipping",
+                "active",
+                "fast",
+                "cutoffTimeDescription",
+                "phoneNumberMandatory",
+                "addressBlackListed",
+                "disableGrayOutLogic",
+                "blacklistMessage",
+                "pssEnable",
+                "supportCOD",
+                "paymentNotAvailable",
+                "pssNoResponse"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "nickName": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "longDescription": {
+                  "type": "string"
+                },
+                "deliveryCost": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "type": {
+                  "type": "string"
+                },
+                "warehouseLimitReached": {
+                  "type": "boolean"
+                },
+                "tommorrowHoliday": {
+                  "type": "boolean"
+                },
+                "supportHazmat": {
+                  "type": "boolean"
+                },
+                "timeSlotInterval": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "formattedDate": {
+                          "type": "string"
+                        },
+                        "times": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "code": {
+                                  "type": "string"
+                                },
+                                "time": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "code",
+                                "time"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "date",
+                        "formattedDate",
+                        "times"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "formattedDate": {
+                          "type": "string"
+                        },
+                        "times": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "code": {
+                                  "type": "string"
+                                },
+                                "time": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "code",
+                                "time"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "date",
+                        "formattedDate",
+                        "times"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "formattedDate": {
+                          "type": "string"
+                        },
+                        "times": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "code": {
+                                  "type": "string"
+                                },
+                                "time": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "code",
+                                "time"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "date",
+                        "formattedDate",
+                        "times"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "formattedDate": {
+                          "type": "string"
+                        },
+                        "times": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "code": {
+                                  "type": "string"
+                                },
+                                "time": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "code",
+                                "time"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "date",
+                        "formattedDate",
+                        "times"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "date": {
+                          "type": "string"
+                        },
+                        "formattedDate": {
+                          "type": "string"
+                        },
+                        "times": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "code": {
+                                  "type": "string"
+                                },
+                                "time": {
+                                  "type": "string"
+                                }
+                              },
+                              "required": [
+                                "code",
+                                "time"
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "required": [
+                        "date",
+                        "formattedDate",
+                        "times"
+                      ]
+                    }
+                  ]
+                },
+                "warehouseCutoffTimePassed": {
+                  "type": "boolean"
+                },
+                "pseudoCode": {
+                  "type": "string"
+                },
+                "template": {
+                  "type": "string"
+                },
+                "freeShipping": {
+                  "type": "boolean"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "fast": {
+                  "type": "boolean"
+                },
+                "additionalInfo": {
+                  "type": "string"
+                },
+                "dateSlotField": {
+                  "type": "string"
+                },
+                "timeSlotField": {
+                  "type": "string"
+                },
+                "phoneNumberMandatory": {
+                  "type": "boolean"
+                },
+                "addressBlackListed": {
+                  "type": "boolean"
+                },
+                "disableGrayOutLogic": {
+                  "type": "boolean"
+                },
+                "blacklistMessage": {
+                  "type": "string"
+                },
+                "pssEnable": {
+                  "type": "boolean"
+                },
+                "supportCOD": {
+                  "type": "boolean"
+                },
+                "paymentNotAvailable": {
+                  "type": "boolean"
+                },
+                "pssNoResponse": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "code",
+                "name",
+                "nickName",
+                "description",
+                "longDescription",
+                "deliveryCost",
+                "type",
+                "warehouseLimitReached",
+                "tommorrowHoliday",
+                "supportHazmat",
+                "timeSlotInterval",
+                "warehouseCutoffTimePassed",
+                "pseudoCode",
+                "template",
+                "freeShipping",
+                "active",
+                "fast",
+                "additionalInfo",
+                "dateSlotField",
+                "timeSlotField",
+                "phoneNumberMandatory",
+                "addressBlackListed",
+                "disableGrayOutLogic",
+                "blacklistMessage",
+                "pssEnable",
+                "supportCOD",
+                "paymentNotAvailable",
+                "pssNoResponse"
+              ]
+            }
+          ]
+        },
+        "deliveryAddressNotCompatible": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "validated",
+        "selectedDeliveryMode",
+        "deliveryModeList",
+        "deliveryAddressNotCompatible"
+      ]
+    },
+    "payment": {
+      "type": "object",
+      "properties": {
+        "validated": {
+          "type": "boolean"
+        },
+        "preSelectedPayMode": {
+          "type": "string"
+        },
+        "selectedPaymentMode": {
+          "type": "string"
+        },
+        "paymentModeList": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "paymentProvider": {
+                  "type": "string"
+                },
+                "visibleDesktop": {
+                  "type": "boolean"
+                },
+                "visibleMobile": {
+                  "type": "boolean"
+                },
+                "visibleCsc": {
+                  "type": "boolean"
+                },
+                "displayOrder": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "standardPaymentModeValue": {
+                  "type": "object",
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "formattedValue": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "formattedValue"
+                  ]
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "sapCode": {
+                  "type": "string"
+                },
+                "customerCBP": {
+                  "type": "string"
+                },
+                "installmentSupported": {
+                  "type": "boolean"
+                },
+                "termsAndConditionRequired": {
+                  "type": "boolean"
+                },
+                "isGuestAllowed": {
+                  "type": "boolean"
+                },
+                "deliveryModeSupported": {
+                  "type": "boolean"
+                },
+                "cbpInvoiceMessage": {
+                  "type": "boolean"
+                },
+                "functionalError": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "code",
+                "name",
+                "paymentProvider",
+                "visibleDesktop",
+                "visibleMobile",
+                "visibleCsc",
+                "displayOrder",
+                "description",
+                "standardPaymentModeValue",
+                "active",
+                "sapCode",
+                "customerCBP",
+                "installmentSupported",
+                "termsAndConditionRequired",
+                "isGuestAllowed",
+                "deliveryModeSupported",
+                "cbpInvoiceMessage",
+                "functionalError"
+              ]
+            }
+          ]
+        },
+        "paymentModeGroup": {
+          "type": "array",
+          "items": {}
+        },
+        "paymentInfoList": {
+          "type": "array",
+          "items": {}
+        },
+        "disableAddGiftCart": {
+          "type": "boolean"
+        },
+        "disableGiftCardWithSplitOrder": {
+          "type": "boolean"
+        },
+        "maxGiftCard": {
+          "type": "integer"
+        },
+        "giftCardPinlength": {
+          "type": "integer"
+        },
+        "giftCardLength": {
+          "type": "integer"
+        },
+        "giftCardGTtotalPrice": {
+          "type": "boolean"
+        },
+        "noCVVCheckoutEnabled": {
+          "type": "boolean"
+        },
+        "codNotSupported": {
+          "type": "boolean"
+        },
+        "creditLimitReached": {
+          "type": "boolean"
+        },
+        "vatMandatory": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "validated",
+        "preSelectedPayMode",
+        "selectedPaymentMode",
+        "paymentModeList",
+        "paymentModeGroup",
+        "paymentInfoList",
+        "disableAddGiftCart",
+        "disableGiftCardWithSplitOrder",
+        "maxGiftCard",
+        "giftCardPinlength",
+        "giftCardLength",
+        "giftCardGTtotalPrice",
+        "noCVVCheckoutEnabled",
+        "codNotSupported",
+        "creditLimitReached",
+        "vatMandatory"
+      ]
+    }
+  },
+  "required": [
+    "cart",
+    "orderTotals",
+    "customer",
+    "delivery",
+    "payment"
+  ]
+}

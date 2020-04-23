@@ -1,0 +1,102 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "cartData": {
+      "type": "object",
+      "properties": {
+        "total": {
+          "type": "string"
+        },
+        "products": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "sku": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "qty": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "string"
+                },
+                "categories": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "sku",
+                "name",
+                "qty",
+                "price",
+                "categories"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "total",
+        "products"
+      ]
+    },
+    "result": {
+      "type": "boolean"
+    },
+    "cartPopupHtml": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "cartData",
+    "result",
+    "cartPopupHtml"
+  ]
+}
