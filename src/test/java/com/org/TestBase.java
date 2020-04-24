@@ -25,12 +25,6 @@ public class TestBase {
     @Autowired
     protected PetService petService;
 
-    @Autowired
-    protected RequestSpecification requestSpecification;
-
-    @Autowired
-    protected PetStorePath path;
-
     @BeforeAll
     void proxyConfig() {
         if (enableProxy) {
