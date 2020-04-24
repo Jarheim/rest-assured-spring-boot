@@ -32,6 +32,11 @@ public class RestConfig {
     @Value("${base_url}")
     private String baseUrl;
 
+    /**
+     * By adding session filter we reuse the same session filter instance to automatically apply
+     * the session id from the previous response.
+     * Jackson is used for serialization and deserialization
+     */
     @Bean
     public RequestSpecification requestSpecification() {
         return new RequestSpecBuilder()
@@ -44,6 +49,10 @@ public class RestConfig {
                 .build();
     }
 
+    /**
+     * Configuring Jackson to fail on unknown properties.
+     * This means that if a property exists in json and not in Java object, the deserialization will fail.
+     */
     private RestAssuredConfig jacksonConfig() {
         return RestAssured.config = RestAssuredConfig.config()
                 .objectMapperConfig(new ObjectMapperConfig().jackson2ObjectMapperFactory(

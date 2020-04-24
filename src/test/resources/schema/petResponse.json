@@ -1,102 +1,71 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "cartData": {
+  "type": "array",
+  "items": [
+    {
       "type": "object",
       "properties": {
-        "total": {
+        "id": {
+          "type": "integer"
+        },
+        "category": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name"
+          ]
+        },
+        "name": {
           "type": "string"
         },
-        "products": {
+        "photoUrls": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "tags": {
           "type": "array",
           "items": [
             {
               "type": "object",
               "properties": {
-                "sku": {
-                  "type": "string"
+                "id": {
+                  "type": "integer"
                 },
                 "name": {
                   "type": "string"
-                },
-                "qty": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "string"
-                },
-                "categories": {
-                  "type": "array",
-                  "items": [
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    },
-                    {
-                      "type": "string"
-                    }
-                  ]
                 }
               },
               "required": [
-                "sku",
-                "name",
-                "qty",
-                "price",
-                "categories"
+                "id",
+                "name"
               ]
             }
           ]
+        },
+        "status": {
+          "type": "string"
         }
       },
       "required": [
-        "total",
-        "products"
+        "id",
+        "category",
+        "name",
+        "photoUrls",
+        "tags",
+        "status"
       ]
-    },
-    "result": {
-      "type": "boolean"
-    },
-    "cartPopupHtml": {
-      "type": "string"
     }
-  },
-  "required": [
-    "cartData",
-    "result",
-    "cartPopupHtml"
   ]
 }

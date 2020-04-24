@@ -2,6 +2,7 @@ package com.org;
 
 import com.org.config.PetStorePath;
 import com.org.config.RestConfig;
+import com.org.services.PetService;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.TestInstance;
@@ -20,6 +21,9 @@ public class TestBase {
 
     @Value("${proxy.enabled}")
     private boolean enableProxy;
+
+    @Autowired
+    protected PetService petService;
 
     @Autowired
     protected RequestSpecification requestSpecification;
