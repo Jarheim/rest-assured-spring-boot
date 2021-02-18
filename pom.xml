@@ -18,7 +18,7 @@
         <junit-platform-runner.version>1.6.1</junit-platform-runner.version>
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
         <rest-assured.version>4.3.0</rest-assured.version>
-        <jackson-databaind.version>2.10.3</jackson-databaind.version>
+        <jackson-databaind.version>2.10.5.1</jackson-databaind.version>
         <assertj-core.version>3.15.0</assertj-core.version>
         <spring-boot-starter-test.version>2.2.5.RELEASE</spring-boot-starter-test.version>
         <lombok.version>1.18.12</lombok.version>
