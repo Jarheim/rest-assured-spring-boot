@@ -22,7 +22,7 @@
         <assertj-core.version>3.15.0</assertj-core.version>
         <spring-boot-starter-test.version>2.2.5.RELEASE</spring-boot-starter-test.version>
         <lombok.version>1.18.12</lombok.version>
-        <spring-web.version>5.2.2.RELEASE</spring-web.version>
+        <spring-web.version>6.0.0</spring-web.version>
     </properties>
 
     <dependencies>
